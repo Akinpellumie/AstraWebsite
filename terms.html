@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AstraPay | Pay with confidence</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/astraFooter.png">
+    <link rel="icon" type="image/png" sizes=32x32 href="images/astraFooter.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- for the animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- cdn for material icon -->
+    <link href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- for carousel -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+
+    <style>
+        body{
+            background: #ffffff;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .parallax {
+        /* The image used */
+        background-image: url("paraStyle.jpg");
+
+        /* Set a specific height */
+        min-height: 500px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        }
+        #logo{
+            height: 50px;
+            margin-left: 35px;
+            margin-top: 5px;
+        } 
+       .slider .btn{
+           margin-top: 40px;
+       }
+       
+       /* praise */
+       /* praise */
+       .tabs .indicator{
+            background-color: #1a237e;
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active{
+            background: transparent;
+        } 
+        h2,h3{
+            margin: 0px;
+            
+        }
+        .cardHow{
+            color: #E0DCFF;
+        }
+        .voucIcn{
+            color: #1DCF9F;
+        }
+        .transIcn{
+            color: #FFC107;
+        }
+        .billIcn{
+            color:#05C691;
+        }
+        .withIcn{
+            color: #FF4521;
+        }
+       .contriIcn{
+           color: #D204D7;
+       }
+       .loanIcn{
+           color: #FF177B;
+       }
+       
+       #contact .input-field input:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field input:focus + label{
+           color: #1a00d4;
+       }
+       #contact .input-field textarea:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field textarea:focus + label{
+           color: #1a00d4;
+       }
+       #pels{
+           margin-top: 20px;
+        } 
+       #footLogo{
+            position: relative;
+            height: 200px;
+            width: 250px;
+            margin-top: 100px;    
+        }
+        
+        #merchBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #agentBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
+        #footer ul.center{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #footer{
+            background-color: #E0DCFF;
+            background: url(images/foot.png); 
+            background-size: cover; 
+            padding-bottom: 0px;
+            margin-top: 50px;
+        }
+        
+        #copyright{
+            background-color: #131212;
+            background-size: inherit;
+            border-top: 2px white;
+            text-align: center;
+        }
+        .icon .loanIcon{
+            font-size: 45px;
+            color: #FF177B;
+        }
+        .icon .phoneIcon{
+            font-size: 45px;
+            color: #FF4521;
+        }
+        .icon .walletIcon{
+            font-size: 45px;
+            color: #FFC107;
+        }
+        .icon .acctIcon{
+            font-size: 45px;
+            color: #05C691;
+        }
+        /* app features */
+        .yes .icon{
+            float: left;
+            margin-right: 20px;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+        .yes .icon .money{
+            font-size: 35px;
+        }
+        .yes .desc{
+            overflow: hidden;
+        }
+        .section2{
+            position: absolute;
+            width: 1440px;
+            height: 803.47px;
+        }
+        .section3{
+            position: absolute;
+            width: 1440px;
+            height: 1131px;
+        }
+        .part-planSection{
+            /* background: url(images/partPlan.png); */
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .section-faq{
+            background: #E0DCFF;
+        }
+        .workSection{
+            background: white;
+        }
+        .card1{
+            margin-top: 15px;
+            margin-left: -35px;
+        }
+        .card2{
+            margin-top: 5px;
+            margin-left: -40px;
+        }
+        .card3{
+            margin-top: 15px;
+            margin-left: -40px;
+        }
+        .Social {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .Social .a {
+            color:#1a00d4;
+        }
+        .part-planSectionMobile{
+            padding: 10px;
+        }
+        
+        .part-planSectionMobile .h6{
+            margin-bottom: 20px;
+        }
+        .part-planSectionMobile .Social{
+            margin-top: 20px;
+            
+        }
+        .part-planSectionMobile .Social .a{
+            color:#1a00d4;
+        }
+        .part-planSection .h6 {
+            margin-bottom: 30px;
+        }
+        .part-planSectionMobile{
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .GetStartedBtn{
+            background-color: #1a00d4;
+            border-radius: 15px;
+        }
+        .link-style{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        section .myCont{
+            width: 80%;
+        }
+        section .myCont h2{
+            margin: 50px;
+        }
+        #works{
+            background: white;
+        }
+        .mobileFootLogo{
+            margin-top: 100px;
+        }
+        .TermsHead{
+            height: 350px;
+            width: initial;
+            background: url(images/termsBg.jpg); 
+        }
+        .TermsHead .h3{
+            margin-top: 50px;
+        }
+        #works .shareBtn{
+            font-size: 35px;
+        }
+        @media only screen and (max-width:767px){
+            section .myCont h2{
+                font-size: 2rem;
+                line-height: 110%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+            <!-- navbar -->
+            <div class="navbar-fixed">
+            <nav class="nav-wrapper indigo">
+                <div class="">
+                    <a href="#" class="brand-logo">
+                        <img src="images/mainLogo.png" alt="logo" id="logo" >
+                    </a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                        <i class="material-icons indigo-text">menu</i>
+                    </a>
+                    
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">About Us</a></li>
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">FAQs</a></li>
+                        <li><a href="merchant.html" id="merchBtn" class="indigo-text white waves-effect btn btn-small">Merchant</a></li>
+                        <li><a href="AgentHome.html" id="agentBtn" class="indigo-text white waves-effect btn-small btn">Become An Agent</a></li>
+                        
+                    </li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </header>
+    
+                    <!-- mobile nav-links -->
+                    <ul class="sidenav white" id="mobile-links">
+                        <li class="divider"></li>
+                        <li><a href="#works" class="waves-effect" target="_self">About Us</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#Faq" class="waves-effect" target="_self">FAQs</a></li>
+                        <li class="divider"></li>
+                        <li><a href="merchant.html" class="waves-effect" target="_self">Merchant</a></li>
+                        <li class="divider"></li>
+                        <li><a href="AgentHome.html" class="waves-effect" target="_self">Become An Agent</a>
+                        </li>
+                    </ul>
+                   
+<!-- 
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="images/termsBg.png" style="background-attachment:fixed">
+                                <div id="txtSlide" style="margin-left: 20px; margin-top: 150px;" class="caption center-align">
+                                    <h3>Terms and Conditions</h3>
+                                    <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <section>
+                        <div class="TermsHead">
+                        <h3 class="indigo-text center-align" style="padding-top: 180px;">Terms and Conditions</h3>
+                        </div>
+                    </section>
+
+<section>
+    
+    <div class="Terms container">
+        <br>
+        <h4 class="indigo-text">Welcome</h4>
+        <br>
+<p>The AstraPay service, website, and/or software application enables you to transfer funds between your bank account and mobile money wallet, and also to another user account or wallet. Also, you may use your mobile money wallet, account, or credit card to pay for services such as utility bills offered by third parties “Products.” 
+    You can also use your Astra Voucher to pay for products and services rendered by merchants.</p>
+<h5 class="indigo-text">Terms of service</h5>
+<br>
+<br>
+<ol>
+<li>These Terms establish a contract between you and AstraPay. You may not be eligible to use our 
+    Services if you do not accept these Terms. By using any part of the Service, you accept these Terms. 
+    Also, if you are under the age of eighteen (18), you may not use the Service.</li><br>
+<li>You must register an account with valid information. To use the Service, you must: <br>
+    (i) agree to the creation of an account associated with a valid number; <br>
+    (ii) accept the present Terms; <br>
+    (iii) submit such other and additional information as AstraPay may subsequently request. <br>
+    You agree to provide true, accurate, and complete information about yourself as prompted by 
+    AstraPay during the account registration process. You will be given the option of setting up a 
+    unique PIN for purposes of reusing your account. However, you are responsible for keeping your 
+    PIN secure.</li><br>
+<li>Third-party merchants offer goods & services. The Service provides you with a method of discovering 
+    offers from independent third-party merchants. These Merchants sell their respective Products 
+    in line with their terms and conditions. For example:<br>
+    •	Airtime purchase: If you choose to purchase pre-paid airtime, you do so according to the relevant terms and conditions of your mobile telecommunications provider.<br>
+    •	Utilities: If you choose to purchase a pre-paid electricity or water bill, you do so according to the relevant terms and conditions of the utility provider.<br>
+    •	Other merchants: If you choose to purchase personal goods or services by merchants, you agree to your provider's terms and condition.<br>
+</li><br>
+
+<li>If you decide to purchase Products such as these from third-party Merchants, you do so at your 
+    own risk and subject to the relevant Merchant’s terms and conditions. The Products are not monitored, 
+    nvestigated, or checked for accuracy, reliability, appropriateness, or completeness by AstraPay. 
+    By permitting you to discover Products via the Service, AstraPay does not imply approval or 
+    endorsement of such Products. You agree that AstraPay is not responsible or liable for the 
+    Products you purchase from Merchants.</li><br>
+<li>Third parties process payments. To facilitate your purchases from Merchants, AstraPay has integrated 
+    its Service with the billing solutions of certain mobile money providers and credit card issuing 
+    banks i.e., "The Payment Processors.” If you purchase a Product from a Merchant using your supported 
+    mobile money wallet or account or credit card, payments will be processed by such Payment Processors. 
+    Notably, Payment Processors have their personal terms and conditions governing your use of their 
+    payment services. You understand and agree that AstraPay does not process payments and is not 
+    responsible or liable for any transactions in which you engage with third-parties. By participating 
+    in a purchase transaction using your mobile money account or credit card, you authorize 
+    AstraPay(on behalf of the Merchant) to bill your account or credit card for the purchase amount.</li><br>
+<li>Your privacy is important to us. AstraPay takes matters of protection and security of its users’ 
+    information very seriously. AstraPay’s privacy policy governing the Service is attached to these 
+    Terms (“Privacy Policy”). The Privacy Policy is incorporated into these Terms by this reference. 
+    By using the Service, you agree to the use of your data following AstraPay’s Privacy Policy. 
+    This Privacy Policy focuses only on the information collected by AstraPay in providing the Service 
+    to you. Merchants and Payment Processors have their personal information gathering practices that 
+    will apply when you choose to purchase Products.</li><br>
+<li>Product inquiries should be forwarded to the relevant Merchant. If you have any questions, concerns, 
+    or requests related to a Product you have purchased from a Merchant, you should contact the Merchant 
+    directly or contact us at support@astrapay.com. Each Merchant maintains its private customer contact 
+    desk for handling such requests; however, AstraPay may try its best effort to assist you further. If 
+    you wish to submit a complaint about the practices of a Merchant offering its Products via the Service,
+     you may contact us by email at <b>support@astrapay.com.</b></li><br>
+<li>You must not use the Service to violate any laws. You must not use the Service to violate or infringe 
+    the rights of any other person, including the rights of other users, AstraPay’s rights in the Service, 
+    or Merchants’ rights in their Products. You must not breach any laws or regulations when using the 
+    Service or attempt to disrupt or interfere with the security or functionality of the Service. 
+    In the event AstraPay has the suspicion you are using the Services for illegal activities such as 
+    fraud, AstraPay will block your account immediately.</li><br>
+<li>AstraPay may contact you regarding your account or the Service. You expressly agree that, as part 
+    of the Service, you may, from time to time, receive communications from AstraPay via email, instant 
+    message, telephone, text message (SMS), or other means. </li><br>
+<li>AstraPay may, in its sole discretion and at any time terminate your access to the Service or 
+    discontinue providing the Service or any part of the Service, with or without notice. You agree that 
+    AstraPay will not be responsible or liable to you or any third party for modifying or discontinuing 
+    the Service, or for terminating or suspending your access to the Service.</li><br>
+<li>Daily Contribution specific provisions. The Daily Contribution product is offered in conjunction 
+    with and under the license of AstraPolaris Microfinance Bank Limited. If at any time AstraPolaris 
+    Microfinance Bank Limited terminates its agreement with Astrapay, the Services related to the Daily 
+    Contribution product shall terminate immediately. The Daily Contribution product shall only be made 
+    available to you once you have completed the registration procedure with one of our agents, and your 
+    identification has been verified. You acknowledge and agree that AstraPay shall maintain the right 
+    to amend the interest rate applicable to the Daily Contribution product. You, as a result of this, 
+    indemnify and waive any/all claims of any nature against AstraPay for interest on your Daily 
+    Contribution product. You agree and acknowledge that where the funds in your Daily Contribution 
+    wallet have been flagged as or are suspected of being fraudulent, AstraPay may immediately suspend 
+    your account and retain the funds pending an investigation process. You agree that every contributed 
+    amount will remain in place for at least twelve (12) months before entering the maturity stage. 
+    If you elect to forfeit your contribution by not continuing with the service after agreeing with 
+    the terms and conditions, you agree that AstraPay may impose a penalty on you for such behavior 
+    and which amount AstraPay may immediately deduct from your Daily Contribution wallet balance. 
+    The automatic transfer can be switched off at any time by you.</li><br>
+<li>The Service is provided without any warranties or guarantees. THE SERVICE IS PROVIDED "AS IS" WITHOUT 
+    WARRANTY OF ANY KIND. ASTRAPAY AND ITS SUPPLIERS AND AFFILIATES DISCLAIM ALL WARRANTIES CONCERNING 
+    THE SERVICE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, 
+    TITLE, AND NON-INFRINGEMENT. IF YOU ARE DISSATISFIED WITH ANY PORTION OF THE SERVICE, OR WITH ANY OF 
+    THESE TERMS, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SERVICE.</li><br>
+<li>AstraPay is not liable for any damages you may incur as a result of using the Services. IN NO EVENT 
+    SHALL ASTRAPAY OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, 
+    CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE 
+    OR PERFORMANCE OF THE SERVICE, WITH THE DELAY OR INABILITY TO USE THE SERVICE, THE PROVISION OF OR 
+    FAILURE TO PROVIDE SERVICES, OR OTHERWISE ARISING OUT OF THE USE OF THE SERVICE, WHETHER BASED ON 
+    CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, EVEN IF OPAY OR ANY OF ITS SUPPLIERS 
+    HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</li><br>
+<li>You agree to arbitrate any disputes. This Agreement is subject to, and shall be governed by, and 
+    construed following the laws of Nigeria, without reference to the principles of conflict of laws 
+    thereof. Any matters arising concerning the interpretation, validity, or implementation of this 
+    Agreement not solved by mutual agreement between the Parties shall be submitted to arbitration in the 
+    English language before a sole arbitrator to take place in Lagos, Nigeria, as the seat of the 
+    arbitration. The arbitration shall be conducted according to the Rules of Arbitration of the 
+    Chartered Institute of Arbitrators of the United Kingdom. The arbitral decision shall be final and 
+    binding on the Parties and may be made an order of the court. The Parties unconditionally consent 
+    and submit to the jurisdiction of the High Court of Lagos, Nigeria, for such purpose. Nothing in this 
+    Agreement will be deemed as preventing AstraPay from seeking injunctive relief (or any other 
+    provisional remedy) from any court having jurisdiction over the Parties and the subject matter of the 
+    dispute as is necessary to protect AstraPay’s name, proprietary information, trade secrets, know-how, 
+    or any other intellectual property rights.</li><br>
+<li>AstraPay may modify these Terms. These Terms and related policies (including but not limited to the 
+    Privacy Policy) may be modified by AstraPay with or without notice at any time in the future. 
+    By using the Service, you agree to be bound by the latest version of these Terms. It is your sole 
+    responsibility to remain informed of any changes in these terms and conditions.</li><br>
+<li>Alteration. No alteration, variation or agreed cancellation of this agreement, and this paragraph, 
+    shall be of any effect unless directed so by us.</li><br>
+<li>Whole Agreement. This Agreement constitutes the entire agreement between the parties concerning the 
+    subject matter hereof. Any of the parties has given no warranties or representations of any nature 
+    whatsoever other than set out in this agreement.</li><br>
+<li>Survival. Each and every provision of this Agreement (excluding only those provisions which are 
+    essential at law for a valid and binding Agreement to be constituted) shall be deemed to be separate 
+    and severable from the remaining provisions of this Agreement. If any of the provisions of this 
+    Agreement (excluding only those provisions which are essential at law for a valid and binding 
+    Agreement to be constituted) is found by any court of competent jurisdiction to be invalid and/or 
+    unenforceable then, notwithstanding such invalidity and/or unenforceability, the remaining provisions 
+    of this Agreement shall be and remain of full force and effect.</li><br>
+
+</ol>
+</div>
+</section>
+<section>
+    <div class="container">
+
+    </div>
+</section>
+
+    <!-- section footer -->
+    <footer id="footer">
+        <div class="footNote hide-on-med-and-down">
+            <div class="row">
+                <div class="col s12 l3">
+                    <ul>
+                        <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 100px;" class="col s12 l3 ched">
+                    <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                    <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                    <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                    <p><a href="#features" class="white-text">Sunday</a></p>
+                    <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                </div>
+                <div style="margin-top: 100px;" class="col s12 l3">
+                        <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                        <p class="white-text">info@astrapay.com</p>
+                        <p class="white-text">070022552528</p>
+                    </div>
+                <div style="margin-top: 100px;" class="col s12 l3">
+                    <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                    <p><a href="#Faq" class="white-text">FAQs</a></p>
+                    <p><a href="#about" class="white-text">About us</a></p>
+                    <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <p><a href="terms.html" class="white-text">Terms & Conditions</a><p>
+                    <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright hide-on-med-and-down" id="copyright">
+                <div class="container white-text center-align" style="float: center">
+                    &copy; 2019 AstraPay LTD. || All rights reserved.
+                </div>
+        </div>
+
+        <div class="hide-on-large-only center-align">
+            <div class="row">
+                <div class="mobileFootLogo col s12">
+                    <ul>
+                        <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px;" class="col s12 ched">
+                    <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                    <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                    <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                    <p><a href="#features" class="white-text">Sunday</a></p>
+                    <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                </div>
+                <div style="margin-top: 15px;" class="col s12">
+                        <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                        <p class="white-text">info@astrapay.com</p>
+                        <p class="white-text">070022552528</p>
+                    </div>
+                <div style="margin-top: 15px;" class="col s12">
+                    <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                    <p><a href="#Faq" class="white-text">FAQs</a></p>
+                    <p><a href="#about" class="white-text">About us</a></p>
+                    <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                    <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright hide-on-large-only" id="copyright">
+                <div class="container white-text center-align" style="float: center">
+                    &copy; 2019 AstraPay LTD. || All rights reserved.
+                </div>
+        </div>
+    </footer>
+
+
+                    <script src="https://kit.fontawesome.com/d54c227c34.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script src="materialize/js/materialize.min.js" type="text/javascript"></script>
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                
+                    <!-- carousel section3 init -->
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.carousel');
+                    var instances = M.Carousel.init(elems, {
+                        indicators: false,
+                        autoplayHoverPause: true,
+                        height: 600,
+                        transition: 2000,
+                        interval: 6000,
+                    });
+                  });
+                
+                  // Or with jQuery
+                
+                  $(document).ready(function(){
+                    $('.carousel').carousel();
+                  });
+                      
+                    </script>
+                    <!-- carousel script -->
+                    <script src="owlcarousel/owl.carousel.min.js"></script>
+                    <script>
+                
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.slider');
+                    var instances = M.Slider.init(elems, {
+                        indicators: false,
+                        autoplayHoverPause: true,
+                        height: 600,
+                        transition: 2000,
+                        interval: 6000,
+                    });
+                    instance.pause(elems, {
+                        autoplayHoverPause: true,
+                    });
+                  });
+                
+                        $(document).ready(function(){
+                            AOS.init();
+                            $('.sidenav').sidenav().on('click tap', 'li a', () => {
+                                 $('.sidenav').sidenav('close');
+                            });
+                            $('.modal').modal();
+                            $('.tooltipped').tooltip();
+                
+                            $('.scrollspy').scrollSpy();
+                            $('.tabs').tabs();
+                            $('.parallax').parallax();
+                            $('.collapsible').collapsible();
+                            $('.carousel.carousel-slider').carousel({
+                                fullwidth: true,
+                                indicators: false
+                            });
+                
+                            $(".owl-carousel").owlCarousel({
+                                loop:true,
+                                margin:10,
+                                nav:false,
+                                dots:false,
+                                autoplay:true,
+                                autoplayHoverPause:true,
+                                responsive:{
+                                    0:{
+                                        items:1
+                                    },
+                                    600:{
+                                        items:1
+                                    },
+                                }
+                            });
+                
+                            
+                        });
+                    </script>
+                
+                    <!-- tawk -->
+                    <!--Start of Tawk.to Script-->
+                  <script type="text/javascript">
+                    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                    (function(){
+                    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                    s1.async=true;
+                    s1.src='https://embed.tawk.to/5d5683cdeb1a6b0be607d1a0/default';
+                    s1.charset='UTF-8';
+                    s1.setAttribute('crossorigin','*');
+                    s0.parentNode.insertBefore(s1,s0);
+                    })();
+                    </script>
+                    <!--End of Tawk.to Script-->
+                </body>
+                </html>

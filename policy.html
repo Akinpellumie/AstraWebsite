@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AstraPay | Pay with confidence</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/astraFooter.png">
+    <link rel="icon" type="image/png" sizes=32x32 href="images/astraFooter.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- for the animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- cdn for material icon -->
+    <link href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- for carousel -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+
+    <style>
+        body{
+            background: #ffffff;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .parallax {
+        /* The image used */
+        background-image: url("paraStyle.jpg");
+
+        /* Set a specific height */
+        min-height: 500px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        }
+        #logo{
+            height: 50px;
+            margin-left: 35px;
+            margin-top: 5px;
+        } 
+       .slider .btn{
+           margin-top: 40px;
+       }
+       
+       /* praise */
+       /* praise */
+       .tabs .indicator{
+            background-color: #1a237e;
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active{
+            background: transparent;
+        } 
+        h2,h3{
+            margin: 0px;
+            
+        }
+        .cardHow{
+            color: #E0DCFF;
+        }
+        .voucIcn{
+            color: #1DCF9F;
+        }
+        .transIcn{
+            color: #FFC107;
+        }
+        .billIcn{
+            color:#05C691;
+        }
+        .withIcn{
+            color: #FF4521;
+        }
+       .contriIcn{
+           color: #D204D7;
+       }
+       .loanIcn{
+           color: #FF177B;
+       }
+       
+       #contact .input-field input:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field input:focus + label{
+           color: #1a00d4;
+       }
+       #contact .input-field textarea:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field textarea:focus + label{
+           color: #1a00d4;
+       }
+       #pels{
+           margin-top: 20px;
+        } 
+       #footLogo{
+            position: relative;
+            height: 200px;
+            width: 250px;
+            margin-top: 100px;    
+        }
+        
+        #merchBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #agentBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
+        #footer ul.center{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #footer{
+            background-color: #E0DCFF;
+            background: url(images/foot.png); 
+            background-size: cover; 
+            padding-bottom: 0px;
+            margin-top: 50px;
+        }
+        
+        #copyright{
+            background-color: #131212;
+            background-size: inherit;
+            border-top: 2px white;
+            text-align: center;
+        }
+        .icon .loanIcon{
+            font-size: 45px;
+            color: #FF177B;
+        }
+        .icon .phoneIcon{
+            font-size: 45px;
+            color: #FF4521;
+        }
+        .icon .walletIcon{
+            font-size: 45px;
+            color: #FFC107;
+        }
+        .icon .acctIcon{
+            font-size: 45px;
+            color: #05C691;
+        }
+        /* app features */
+        .yes .icon{
+            float: left;
+            margin-right: 20px;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+        .yes .icon .money{
+            font-size: 35px;
+        }
+        .yes .desc{
+            overflow: hidden;
+        }
+        .section2{
+            position: absolute;
+            width: 1440px;
+            height: 803.47px;
+        }
+        .section3{
+            position: absolute;
+            width: 1440px;
+            height: 1131px;
+        }
+        .part-planSection{
+            /* background: url(images/partPlan.png); */
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .section-faq{
+            background: #E0DCFF;
+        }
+        .workSection{
+            background: white;
+        }
+        .card1{
+            margin-top: 15px;
+            margin-left: -35px;
+        }
+        .card2{
+            margin-top: 5px;
+            margin-left: -40px;
+        }
+        .card3{
+            margin-top: 15px;
+            margin-left: -40px;
+        }
+        .Social {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .Social .a {
+            color:#1a00d4;
+        }
+        .part-planSectionMobile{
+            padding: 10px;
+        }
+        
+        .part-planSectionMobile .h6{
+            margin-bottom: 20px;
+        }
+        .part-planSectionMobile .Social{
+            margin-top: 20px;
+            
+        }
+        .part-planSectionMobile .Social .a{
+            color:#1a00d4;
+        }
+        .part-planSection .h6 {
+            margin-bottom: 30px;
+        }
+        .part-planSectionMobile{
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .GetStartedBtn{
+            background-color: #1a00d4;
+            border-radius: 15px;
+        }
+        .link-style{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        section .myCont{
+            width: 80%;
+        }
+        section .myCont h2{
+            margin: 50px;
+        }
+        #works{
+            background: white;
+        }
+        .mobileFootLogo{
+            margin-top: 100px;
+        }
+        .TermsHead{
+            height: 350px;
+            width: initial;
+            background: url(images/termsBg.jpg); 
+        }
+        .TermsHead .h3{
+            margin-top: 50px;
+        }
+        #works .shareBtn{
+            font-size: 35px;
+        }
+        @media only screen and (max-width:767px){
+            section .myCont h2{
+                font-size: 2rem;
+                line-height: 110%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+            <!-- navbar -->
+            <div class="navbar-fixed">
+            <nav class="nav-wrapper indigo">
+                <div class="">
+                    <a href="#" class="brand-logo">
+                        <img src="images/mainLogo.png" alt="logo" id="logo" >
+                    </a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                        <i class="material-icons indigo-text">menu</i>
+                    </a>
+                    
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">About Us</a></li>
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">FAQs</a></li>
+                        <li><a href="merchant.html" id="merchBtn" class="indigo-text white waves-effect btn btn-small">Merchant</a></li>
+                        <li><a href="AgentHome.html" id="agentBtn" class="indigo-text white waves-effect btn-small btn">Become An Agent</a></li>
+                        
+                    </li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </header>
+    
+                    <!-- mobile nav-links -->
+                    <ul class="sidenav white" id="mobile-links">
+                        <li class="divider"></li>
+                        <li><a href="#works" class="waves-effect" target="_self">About Us</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#Faq" class="waves-effect" target="_self">FAQs</a></li>
+                        <li class="divider"></li>
+                        <li><a href="merchant.html" class="waves-effect" target="_self">Merchant</a></li>
+                        <li class="divider"></li>
+                        <li><a href="AgentHome.html" class="waves-effect" target="_self">Become An Agent</a>
+                        </li>
+                    </ul>
+                   
+<!-- 
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="images/termsBg.png" style="background-attachment:fixed">
+                                <div id="txtSlide" style="margin-left: 20px; margin-top: 150px;" class="caption center-align">
+                                    <h3>Terms and Conditions</h3>
+                                    <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <section>
+                        <div class="TermsHead">
+                        <h3 class="indigo-text center-align" style="padding-top: 180px;">Privacy Policy</h3>
+                        </div>
+                    </section>
+
+<section>
+    
+    <div class="Terms container">
+     <p style="text-align: justify;">
+        
+        AstraPay collects the following data exclusively to be able to provide the Service: name, surname, email address, mobile phone number, as provided by you. AstraPay might also collect your mobile phone number directly from your device, if possible. AstraPay uses the data to deliver the Service and maintain a customer relationship, including processing refund claims.
+    </p><br>
+
+    <p style="text-align: justify;">
+        AstraPay analytics service may create cumulative usage reports for advertisers and partners. This allows our advertisers to advertise more effectively and allows our users to receive advertisements that are relevant to their needs. AstraPay never shares individual personal information with anyone, so an advertiser will never know that a specific user clicked on that advertiser’s advertisement.
+    </p><br>
+    
+    <p style="text-align: justify;">
+        AstraPay uses the above-described information to tailor the Service to suit user needs and help our advertisers better understand our audience demographics. Be aware that we do not share information about individual users with any third party agents.
+    </p><br>
+
+    <p style="text-align: justify;">
+        AstraPay maintains the right to disclose any information we have as required by law and when we believe that disclosure is necessary to protect our rights and/or comply with a judicial proceeding, court order, or legal process.
+    </p><br>
+
+    <p style="text-align: justify;">
+        If you use the Service to purchase Products from third-party Merchants as further described in our Terms of Service, the collection of data by such third party Merchant is described in the relevant privacy policy of such Merchant.
+    </p> <br>
+
+    <p style="text-align: justify;">
+        AstraPay will inform you of any changes or updates to this Privacy Policy through its website or in-app notifications. To learn more about the measures implemented by AstraPay to protect your personal information, or if you have any inquiries on the processing of your data, you may contact us at privacy@AstraPay.com.
+    </p><br>
+
+    <p style="text-align: justify;">
+        By using any part of the Service, you acknowledge and agree to the processing of your data under the terms and conditions set out in this Privacy Policy.        
+    </p><br>
+    
+    </div>
+</section>
+
+
+    <!-- section footer -->
+    <footer id="footer">
+        <div class="footNote hide-on-med-and-down">
+            <div class="row">
+                <div class="col s12 l3">
+                    <ul>
+                        <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 100px;" class="col s12 l3 ched">
+                    <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                    <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                    <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                    <p><a href="#features" class="white-text">Sunday</a></p>
+                    <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                </div>
+                <div style="margin-top: 100px;" class="col s12 l3">
+                        <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                        <p class="white-text">info@astrapay.com</p>
+                        <p class="white-text">070022552528</p>
+                    </div>
+                <div style="margin-top: 100px;" class="col s12 l3">
+                    <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                    <p><a href="#Faq" class="white-text">FAQs</a></p>
+                    <p><a href="#about" class="white-text">About us</a></p>
+                    <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <p><a href="terms.html" class="white-text">Terms & Conditions</a><p>
+                    <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright hide-on-med-and-down" id="copyright">
+                <div class="container white-text center-align" style="float: center">
+                    &copy; 2019 AstraPay LTD. || All rights reserved.
+                </div>
+        </div>
+
+        <div class="hide-on-large-only center-align">
+            <div class="row">
+                <div class="mobileFootLogo col s12">
+                    <ul>
+                        <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px;" class="col s12 ched">
+                    <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                    <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                    <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                    <p><a href="#features" class="white-text">Sunday</a></p>
+                    <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                </div>
+                <div style="margin-top: 15px;" class="col s12">
+                        <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                        <p class="white-text">info@astrapay.com</p>
+                        <p class="white-text">070022552528</p>
+                    </div>
+                <div style="margin-top: 15px;" class="col s12">
+                    <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                    <p><a href="#Faq" class="white-text">FAQs</a></p>
+                    <p><a href="#about" class="white-text">About us</a></p>
+                    <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                    <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright hide-on-large-only" id="copyright">
+                <div class="container white-text center-align" style="float: center">
+                    &copy; 2019 AstraPay LTD. || All rights reserved.
+                </div>
+        </div>
+    </footer>
+
+
+                    <script src="https://kit.fontawesome.com/d54c227c34.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script src="materialize/js/materialize.min.js" type="text/javascript"></script>
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                
+                    <!-- carousel section3 init -->
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.carousel');
+                    var instances = M.Carousel.init(elems, {
+                        indicators: false,
+                        autoplayHoverPause: true,
+                        height: 600,
+                        transition: 2000,
+                        interval: 6000,
+                    });
+                  });
+                
+                  // Or with jQuery
+                
+                  $(document).ready(function(){
+                    $('.carousel').carousel();
+                  });
+                      
+                    </script>
+                    <!-- carousel script -->
+                    <script src="owlcarousel/owl.carousel.min.js"></script>
+                    <script>
+                
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('.slider');
+                    var instances = M.Slider.init(elems, {
+                        indicators: false,
+                        autoplayHoverPause: true,
+                        height: 600,
+                        transition: 2000,
+                        interval: 6000,
+                    });
+                    instance.pause(elems, {
+                        autoplayHoverPause: true,
+                    });
+                  });
+                
+                        $(document).ready(function(){
+                            AOS.init();
+                            $('.sidenav').sidenav().on('click tap', 'li a', () => {
+                                 $('.sidenav').sidenav('close');
+                            });
+                            $('.modal').modal();
+                            $('.tooltipped').tooltip();
+                
+                            $('.scrollspy').scrollSpy();
+                            $('.tabs').tabs();
+                            $('.parallax').parallax();
+                            $('.collapsible').collapsible();
+                            $('.carousel.carousel-slider').carousel({
+                                fullwidth: true,
+                                indicators: false
+                            });
+                
+                            $(".owl-carousel").owlCarousel({
+                                loop:true,
+                                margin:10,
+                                nav:false,
+                                dots:false,
+                                autoplay:true,
+                                autoplayHoverPause:true,
+                                responsive:{
+                                    0:{
+                                        items:1
+                                    },
+                                    600:{
+                                        items:1
+                                    },
+                                }
+                            });
+                
+                            
+                        });
+                    </script>
+                
+                    <!-- tawk -->
+                    <!--Start of Tawk.to Script-->
+                  <script type="text/javascript">
+                    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                    (function(){
+                    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                    s1.async=true;
+                    s1.src='https://embed.tawk.to/5d5683cdeb1a6b0be607d1a0/default';
+                    s1.charset='UTF-8';
+                    s1.setAttribute('crossorigin','*');
+                    s0.parentNode.insertBefore(s1,s0);
+                    })();
+                    </script>
+                    <!--End of Tawk.to Script-->
+                </body>
+                </html>

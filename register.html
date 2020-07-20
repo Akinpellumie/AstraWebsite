@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agent</title>
-    <!-- material icons -->
+    <title>AstraPay | Become an Agent</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- materialize framework -->
     <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet">
-
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/astraFooter.png">
@@ -19,18 +16,36 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-     <!-- for montserrat fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
-      <!-- cdn for material design icon -->
+    <!-- for the animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- cdn for material icon -->
     <link href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" rel="stylesheet">
-    
+
+    <!-- for carousel -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+
     <style>
-    body {
-        scroll-behavior: smooth;
-        font-family: "Montserrat", "Poppins", sans-serif;
-        background: url("images/slider.jpg");
-        background-size: cover;
-     }
+        body{
+            background: #E0DCFF;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .caption{
+            color: #FF4521;
+        }
+        #logo{
+            height: 50px;
+            margin-left: 35px;
+            margin-top: 5px;
+        } 
      /* contact style */
      #contact .input-field input:focus{
            border-bottom: 1px solid #1a00d4;
@@ -41,29 +56,179 @@
        #contact .input-field textarea:focus{
            border-bottom: 1px solid #1a00d4;
        }
+       #contact .input-field textarea{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field label{
+        color: #1a00d4;
+        }
+       #contact .input-field input{
+           border-bottom: 1px solid #1a00d4;
+        }
+       #contact .input-field textarea + label{
+           color: #1a00d4;
+       }
+       #contact .input-field input + label{
+           color: #1a00d4;
+       }
+       #contact .card-panel .p{
+           color: #1a00d4;
+       }
+       #contact .card-panel{
+           fill-opacity: 0;
+           border-color: #FF4521;
+           border-style: solid;
+           background-color: transparent;
+            color: #1a00d4;
+       }
        #contact .input-field textarea:focus + label{
            color: #1a00d4;
+       }
+       #contact .filled-in{
+           background-color: #1a00d4;
        }
        /* radio style */
        [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
            border: 2px solid #1a00d4;
+           border-color: #1a00d4;
        }
        [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
             background-color: #1a00d4;
+            border-color: #1a00d4;
             }
-      
+            [type="checkbox"]:checked+span:after, [type="checkbox"].with-gap:checked+span:before, [type="checkbox"].with-gap:checked+span:after {
+                background-color: #1a00d4;
+            }
+
+            #pels{
+           margin-top: 20px;
+        } 
+        .dropdown-content li>span {
+            color: #1a00d4;
+        }
+        [type="checkbox"].filled-in:not(:checked)+span:not(.lever):after {
+            border: 2px solid #1a00d4;
+        }
+
+        [type="checkbox"].filled-in:checked+span:not(.lever):after {
+            border: 2px solid #1a00d4;
+            background-color: #1a00d4;
+        }
+       #footLogo{
+            position: relative;
+            height: 200px;
+            width: 250px;
+            margin-top: 10%;    
+        }
+        #footerSect{
+            margin-top: 150px;
+        }
+        #footer ul.center{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #merchBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #agentBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
+        #footer{
+            background-color: #E0DCFF;
+            background: url(images/foot.png); 
+            background-size: cover; 
+            padding-bottom: 0px;
+            
+        }
+        #copyright{
+            background-color: #131212;
+            background-size: inherit;
+            border-top: 2px white;
+            text-align: center;
+        }
+        @media only screen and (max-width:767px){
+            section .myCont h2{
+                font-size: 2rem;
+                line-height: 110%;
+            }
+        }
+        .ContactBtn{
+            background-color: #FF4521;
+            margin-left: 150px; 
+            margin-top: 35px; 
+            border-radius: 15px;
+        }
+        .SubmitBtn{
+            border-radius: 15px;
+        }
+        .mobileFooter .mobileFootLogo{
+            margin-top: 150px;
+        }
       
     </style>
 
 </head>
 <body>
+    <!-- header -->
+    <header>
+        <!-- navbar -->
+        <div class="navbar-fixed">
+        <nav class="nav-wrapper indigo">
+            <div class="">
+                <a href="#" class="brand-logo">
+                    <img src="images/agentLogo.png" alt="logo" id="logo" >
+                </a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons indigo-text">menu</i>
+                </a>
+                
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#Faq" class="white-text center-align text-darken-4">About Us</a></li>
+                    <li><a href="#Faq" class="white-text center-align text-darken-4">FAQs</a></li>
+                    <li><a href="merchant.html" id="merchBtn" class="indigo-text white waves-effect btn btn-small">Merchant</a></li>
+                </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+                <!-- mobile nav-links -->
+                <ul class="sidenav white" id="mobile-links">
+                    <li class="divider"></li>
+                    <li><a href="#Faq" class="waves-effect" target="_self">About Us</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#Faq" class="waves-effect" target="_self">FAQs</a></li>
+                    <li class="divider"></li>
+                    <li><a href="merchant.html" class="waves-effect" target="_self">Merchant</a></li>
+                </ul>
+               
+                <!-- section 1 -->
+                <div style="max-width:initial;" class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/RegisterSlide.jpg" style="background-attachment:fixed">
+                            <div id="txtSlide" style="margin-top: 100px;" class="caption left-align">
+                                <h4 style="color: #FF4521;" class="light">Become an Agent Today</h4>
+                                <a href="index.html#faq" class="ContactBtn white-text waves-effect btn btn-large">Contact us</a>
+                                <!-- <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
     <section id="contact">
         <div class="container">
             <div class="row">
                 <br>
                 <div class="col s12 l7 offset-l2">
-                <div class="card-panel grey lighten-3">
-                    <h5 class="indigo-text center-align">Become An Agent Today.</h5>
+                <div class="card-panel">
+                    <h6 class="indigo-text center-align">Fill in your details correctly. <br>
+                        Our Agent support will contact you.</h6>
                     <form>
                         <div class="input-field">
                             <input type="text" required>
@@ -98,8 +263,61 @@
                                 <textarea class="materialize-textarea"></textarea>
                                 <label for="messsage">Contact Address</label>
                             </div>
+                            <div class="input-field col s12">
+                                <select>
+                                  <option value="" disabled selected>Select State</option>
+                                  <option value="1">Abia</option>
+                                  <option value="2">Adamawa</option>
+                                  <option value="3">Akwa Ibom</option>
+                                  <option value="4">Anambra</option>
+                                  <option value="5">Bauchi</option>
+                                  <option value="6">Bayelsa</option>
+                                  <option value="7">Benue</option>
+                                  <option value="8">Borno</option>
+                                  <option value="9">Cross River</option>
+                                  <option value="10">Delta</option>
+                                  <option value="11">Ebonyi</option>
+                                  <option value="12">Edo</option>
+                                  <option value="13">Ekiti</option>
+                                  <option value="14">Enugu</option>
+                                  <option value="15">Gombe</option>
+                                  <option value="16">Imo</option>
+                                  <option value="17">Jigawa</option>
+                                  <option value="18">Kaduna</option>
+                                  <option value="19">Kano</option>
+                                  <option value="20">Katsina</option>
+                                  <option value="21">Kebbi</option>
+                                  <option value="22">Kogi</option>
+                                  <option value="23">Kwara</option>
+                                  <option value="24">Lagos</option>
+                                  <option value="25">Nasarawa</option>
+                                  <option value="26">Niger</option>
+                                  <option value="27">Ogun</option>
+                                  <option value="28">Ondo</option>
+                                  <option value="29">Osun</option>
+                                  <option value="30">Oyo</option>
+                                  <option value="31">Plateau</option>
+                                  <option value="32">Rivers</option>
+                                  <option value="33">Sokoto</option>
+                                  <option value="34">Taraba</option>
+                                  <option value="35">Yobe</option>
+                                  <option value="36">Zamfara</option>
+
+
+                                </select>
+                                <label>State</label>
+                              </div>
+                              <div class="input-field">
+                                <p>
+                                    <label>
+                                      <input type="checkbox" class="filled-in" checked="checked" />
+                                      <span>By submitting, you accept our  <a href="index.html#contact" style="color: #FF4521;"> terms and conditions</a> 
+                                        and <a href="index.html#contact" style="color: #FF4521;">privacy policy.</a></span>
+                                    </label>&nbsp;
+                                  </p>
+                            </div>
                         <div class="center-align">
-                            <input type="submit" value="Submit" class="btn indigo">
+                            <input type="submit" value="Submit" class="SubmitBtn btn btn-large indigo">
                         </div>
                     </form><br>
                     <div class="center-align">
@@ -111,10 +329,227 @@
     </div>
     </section>
 
+    <section id="section3" class="section section works grey lighten-4 scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+        <div class="container">
+            <h5 class="indigo-text center-align">GETTING STARTED</h5>
+                <div class="row" style="margin-bottom: 50px;">
+                    <div class="col s12 l4 yes">
+                        <div class="desc">
+                            <h5 style="text-decoration: underline;" class="indigo-text">STEP 1</h5>
+                            <p class="indigo-text">Register with us</p>
+                        </div>
+                    </div>
+                        <div class="col s12 l4 yes">
+                            <div class="desc">
+                                <h5 style="text-decoration: underline;" class="indigo-text">STEP 2</h5>
+                                <p class="indigo-text">Our Agent  Support 
+                                    will contact you</p>
+                            </div>
+                        </div>
+                         <div class="col s12 l4 yes">
+                            <div class="desc">
+                                <h5 style="text-decoration: underline;" class="indigo-text">STEP 3</h5>
+                                 <p class="indigo-text">Download the App </p>
+                                 <p class="indigo-text">Start earning endlessly</p>
+                             </div>
+                         </div>
+                   </div>
+        </div>
+        </section>
+<!--         
+        <div class="parallax-container">
+            <div class="parallax">
+            <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+            </div>
+        </div> -->
+        
+        <!-- section footer -->
+        <footer id="footer">
+            <div class="footerSect hide-on-med-and-down">
+                <div class="row">
+                    <div style="margin-top: 100px;" class="col s12 l3">
+                        <ul>
+                            <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 100px;" class="col s12 l3 ched">
+                        <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                        <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                        <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                        <p><a href="#features" class="white-text">Sunday</a></p>
+                        <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                    </div>
+                    <div style="margin-top: 100px;" class="col s12 l3">
+                            <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                            <p class="white-text">info@astrapay.com</p>
+                            <p class="white-text">070022552528</p>
+                        </div>
+                    <div style="margin-top: 100px;" class="col s12 l3">
+                        <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                        <p><a href="#Faq" class="white-text">FAQs</a></p>
+                        <p><a href="#about" class="white-text">About us</a></p>
+                        <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                        <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                        <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright hide-on-med-and-down" id="copyright">
+                    <div class="container white-text center-align" style="float: center">
+                        &copy; 2019 AstraPay LTD. || All rights reserved.
+                    </div>
+            </div>
+
+            <!-- mobile footer -->
+
+            <div class="mobileFooter hide-on-large-only center-align">
+                <div class="row">
+                    <div class="mobileFootLogo col s12">
+                        <ul>
+                            <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 15px;" class="col s12 ched">
+                        <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                        <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                        <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                        <p><a href="#features" class="white-text">Sunday</a></p>
+                        <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                    </div>
+                    <div style="margin-top: 15px;" class="col s12">
+                            <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                            <p class="white-text">info@astrapay.com</p>
+                            <p class="white-text">070022552528</p>
+                        </div>
+                    <div style="margin-top: 15px;" class="col s12">
+                        <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                        <p><a href="#Faq" class="white-text">FAQs</a></p>
+                        <p><a href="#about" class="white-text">About us</a></p>
+                        <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                        <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                        <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright hide-on-large-only" id="copyright">
+                    <div class="container white-text center-align" style="float: center">
+                        &copy; 2019 AstraPay LTD. || All rights reserved.
+                    </div>
+            </div>
+        </footer>
+
+
 
 
     <script src="https://kit.fontawesome.com/d54c227c34.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="materialize/js/materialize.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- carousel section3 init -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        indicators: false,
+        autoplayHoverPause: true,
+        height: 600,
+        transition: 2000,
+        interval: 6000,
+    });
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+      
+    </script>
+
+    <!-- select state form -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+      });
+      
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+    </script>
+    
+    <!-- carousel script -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, {
+        indicators: false,
+        autoplayHoverPause: true,
+        height: 600,
+        transition: 2000,
+        interval: 6000,
+    });
+    instance.pause(elems, {
+        autoplayHoverPause: true,
+    });
+  });
+
+        $(document).ready(function(){
+            AOS.init();
+            $('.sidenav').sidenav().on('click tap', 'li a', () => {
+                 $('.sidenav').sidenav('close');
+            });
+            $('.modal').modal();
+            $('.tooltipped').tooltip();
+
+            $('.scrollspy').scrollSpy();
+            $('.tabs').tabs();
+            $('.parallax').parallax();
+            $('.collapsible').collapsible();
+            $('.carousel.carousel-slider').carousel({
+                fullwidth: true,
+                indicators: false
+            });
+
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                dots:false,
+                autoplay:true,
+                autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                }
+            });
+
+            
+        });
+    </script>
+
+    <!-- tawk -->
+    <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5d5683cdeb1a6b0be607d1a0/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>

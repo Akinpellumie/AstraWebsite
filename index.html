@@ -10,7 +10,7 @@
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/astraFooter.png">
-    <link rel="icon" type="image/png" sizes=32x32 href="images/astraFooter.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/astraFooter.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -26,21 +26,42 @@
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
 
-    <!-- for montserrat fonts -->
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
 
     <style>
         body{
+            background: #E0DCFF;
             scroll-behavior: smooth;
-            font-family: 'Montserrat','Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .parallax {
+        /* The image used */
+        background-image: url("paraStyle.jpg");
+
+        /* Set a specific height */
+        min-height: 500px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        }
+        *{
+            margin: 0;
+            padding: 0;
         }
         #logo{
             height: 50px;
-            margin-left: 20px;
+            margin-left: 35px;
             margin-top: 5px;
         } 
        .slider .btn{
-           margin-top: 20px;
+           margin-top: 40px;
        }
        
        /* praise */
@@ -55,8 +76,28 @@
             margin: 0px;
             
         }
+        .cardHow{
+            color: #E0DCFF;
+        }
+        .voucIcn{
+            color: #1DCF9F;
+        }
+        .transIcn{
+            color: #FFC107;
+        }
+        .billIcn{
+            color:#05C691;
+        }
+        .withIcn{
+            color: #FF4521;
+        }
+       .contriIcn{
+           color: #D204D7;
+       }
+       .loanIcn{
+           color: #FF177B;
+       }
        
-       /* shina */
        #contact .input-field input:focus{
            border-bottom: 1px solid #1a00d4;
        }
@@ -78,15 +119,50 @@
             width: 250px;
             margin-top: 10%;    
         }
+        
+        #merchBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #agentBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
         #footer ul.center{
             display: flex;
             justify-content: space-evenly;
         }
+        #footer{
+            background-color: #E0DCFF;
+            background: url(images/foot.png); 
+            background-size: cover; 
+            padding-bottom: 0px;
+            margin-top: -200px;
+        }
+        
         #copyright{
             background-color: #131212;
-            background-size: auto;
+            background-size: inherit;
             border-top: 2px white;
             text-align: center;
+        }
+        .icon .loanIcon{
+            font-size: 45px;
+            color: #FF177B;
+        }
+        .icon .phoneIcon{
+            font-size: 45px;
+            color: #FF4521;
+        }
+        .icon .walletIcon{
+            font-size: 45px;
+            color: #FFC107;
+        }
+        .icon .acctIcon{
+            font-size: 45px;
+            color: #05C691;
         }
         /* app features */
         .yes .icon{
@@ -101,11 +177,106 @@
         .yes .desc{
             overflow: hidden;
         }
+        .section-home{
+            background-color: white;
+        }
+        .section2{
+            position: absolute;
+            width: 1440px;
+            height: 803.47px;
+        }
+        .section3{
+            position: absolute;
+            width: 1440px;
+            height: 1131px;
+        }
+        .part-planSection{
+            /* background: url(images/partPlan.png); */
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .section-faq{
+            background: #E0DCFF;
+        }
+        .workSection{
+            background: white;
+        }
+        .card1{
+            margin-top: 15px;
+            margin-left: -35px;
+        }
+        .card2{
+            margin-top: 5px;
+            margin-left: -40px;
+        }
+        .card3{
+            margin-top: 15px;
+            margin-left: -40px;
+        }
+        .Social {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .Social .a {
+            color:#1a00d4;
+        }
+        .part-planSectionMobile{
+            padding: 10px;
+        }
+        
+        .part-planSectionMobile .h6{
+            margin-bottom: 20px;
+        }
+        .part-planSectionMobile .Social{
+            margin-top: 20px;
+            
+        }
+        .part-planSectionMobile .Social .a{
+            color:#1a00d4;
+        }
+        .part-planSection .h6 {
+            margin-bottom: 30px;
+        }
+        .part-planSectionMobile{
+            background: #EAB4CB;
+            margin-top: 100px;
+            box-shadow: 10px 20px 60px rgba(0,0,0,0.06);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top: 3px solid #1A00D4;
+            position: relative;
+            z-index: 5;
+        }
+        .GetStartedBtn{
+            background-color: #1a00d4;
+            border-radius: 15px;
+        }
+        .link-style{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
         section .myCont{
             width: 80%;
         }
         section .myCont h2{
             margin: 50px;
+        }
+        h3{
+            color: #5f5d5d;
+        }
+        #works{
+            background: white;
+        }
+        .mobileFootLogo{
+            margin-top: 100px;
         }
         #works .shareBtn{
             font-size: 35px;
@@ -125,32 +296,21 @@
     <header>
             <!-- navbar -->
             <div class="navbar-fixed">
-            <nav class="nav-wrapper white">
+            <nav class="nav-wrapper indigo">
                 <div class="">
                     <a href="#" class="brand-logo">
-                        <img src="images/recentLogo.png" alt="logo" id="logo" >
+                        <img src="images/mainLogo.png" alt="logo" id="logo" >
                     </a>
                     <a href="#" class="sidenav-trigger" data-target="mobile-links">
                         <i class="material-icons indigo-text">menu</i>
                     </a>
+                    
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#features" class="indigo-text text-darken-4">Features</a></li>
-                        <li><a href="#about" class="indigo-text text-darken-4">About us</a></li>
-                        <li><a href="#Faq" class="indigo-text text-darken-4">FAQs</a></li>
-                        <li><a href="#works" class="indigo-text text-darken-4">Get AstraPay</a></li>
-                        <li><a href="howTo.html" class="indigo-text text-darken-4">How To</a></li>
-                        <li><a href="register.html" class="indigo-text text-darken-4">Become An Agent</a></li>
-                        <li><a href="#" class="btn-floating btn-small indigo darken-3 pulse" data-tooltip="Instagram">
-                            <i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li><a href="#" class="btn-floating btn-small indigo darken-3 pulse" data-tooltip="Facebook">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li><a href="#" class="btn-floating btn-small indigo darken-3 pulse" data-tooltip="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">About Us</a></li>
+                        <li><a href="#Faq" class="white-text center-align text-darken-4">FAQs</a></li>
+                        <li><a href="merchant.html" id="merchBtn" class="indigo-text white waves-effect btn btn-small">Merchant</a></li>
+                        <li><a href="AgentHome.html" id="agentBtn" class="indigo-text white waves-effect btn-small btn">Become An Agent</a></li>
+                     
                     </ul>
                 </div>
                 </nav>
@@ -159,17 +319,14 @@
     
                     <!-- mobile nav-links -->
                     <ul class="sidenav white" id="mobile-links">
-                        <li><a href="#features" class="waves-effect" target="_self">Features</a></li>
                         <li class="divider"></li>
-                        <li><a href="#about" class="waves-effect" target="_self">About us</a></li>
+                        <li><a href="#works" class="waves-effect" target="_self">About Us</a></li>
                         <li class="divider"></li>
                         <li><a href="#Faq" class="waves-effect" target="_self">FAQs</a></li>
                         <li class="divider"></li>
-                        <li><a href="#works" class="waves-effect" target="_self">Get AstraPay</a></li>
+                        <li><a href="merchant.html" class="waves-effect" target="_self">Merchant</a></li>
                         <li class="divider"></li>
-                        <li><a href="howTo.html" class="waves-effect" target="_self">How To</a></li>
-                        <li class="divider"></li>
-                        <li><a href="register.html" class="waves-effect" target="_self">Become An Agent</a>
+                        <li><a href="AgentHome.html" class="waves-effect" target="_self">Become An Agent</a>
                         </li>
                     </ul>
                    
@@ -177,471 +334,382 @@
      <div class="slider">
         <ul class="slides">
             <li>
-                <img src="images/sliderOne.jpg" style="background-attachment:fixed">
-                <div class="caption center">
-                    <h3>Ease Your Transactions</h3>
-                    <h5 class="light grey-text text-lighten-3"> Make Transactions, at the speed of thought! </h5>
-                    <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a>
+                <img src="images/HomeNew.jpg" style="background-attachment:fixed">
+                <div id="txtSlide" style="margin-left: 20px; margin-top: 150px;" class="caption right-align">
+                    <h4 class="indigo-text">Built just for you</h4> <br>
+                    <h5 class="light indigo-text"> Enjoy your e-bank the way you love it </h5>
+                    <!-- <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a> -->
                 </div>
             </li>
             <li>
-                <img src="images/slideThree.jpg" style="background-attachment:fixed">
-                <div class="caption center-align">
-                <h3>Get Soft Loans</h3>
-                    <h5 class="light grey-text text-lighten-3">Request for loans and get instant reply.  </h5>
+                <img src="images/HomeBg2.jpg" style="background-attachment:fixed">
+                <div id="txt-Slide" style="margin-left: 20px; margin-top: 150px;" class="caption right-align">
+                <h4 class="indigo-text">Enjoy total freedeom</h4>
+                    <h5 class="light indigo-text">Enjoy seamless and free money transfer</h5>
                     <a href="#works" class="white indigo-text waves-effect btn btn-large">Get Started</a>
                 </div>
             </li>
-            <li>
+            <!-- <li>
                 <img src="images/slider.jpg" style="background-attachment:fixed; background-size: cover; background-position: center">
                 <div class="caption center-align">
                 <h3>All Budgets</h3>
                 <h5 class="light grey-text text-lighten-3">You are involved in the plan. Let's work with you. </h5>
                 <a href="#works" class="white indigo-text waves-effect btn btn-large">Get Started</a>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
-
    
+<!-- parallax -->
+    <!-- <div class="parallax-container">
+        <div class="parallax">
+        <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+        </div>
+    </div> -->
 
     <!--Features Intro-->
-    <section class="section-home scrollspy">
+    <section style="padding-top:20px; padding-bottom: 15px;" id="section2" class="grey-text section-home scrollspy">
         <div class="container myCont">
-            <h2 class="center-align ease">Your Ease, Our Delight</h2>
-            <div class="row">
+            <h3 style="padding-top:20px; padding-bottom: 15px;" class="center-align hide-on-med-and-down ease">Your Ease, Our Delight</h3>
+            <h4 style="padding-top:20px; padding-bottom: 15px;" class="center-align hide-on-large-only ease">Your Ease, Our Delight</h4>
+            <div class="row" style="margin-bottom: 50px;">
                 <div class="col s12 l4 yes">
                     <div class="icon">
-                        <span class="mdi mdi-qrcode-scan indigo-text"></span>
+                        <span class="voucIcn mdi mdi-qrcode-scan"></span>
                     </div>
                     <div class="desc">
-                        <h5>Vouchers</h5>
-                        <p class="grey-text text-darken-1">You can raise and redeem vouchers all in one app.<a href="#features" class="indigo-text"> Read More...</a></p>
+                        <h5 class="indigo-text">VOUCHERS</h5>
+                        <p class="indigo-text">Raise or redeem voucher for your next trip or to buy gift or movies with ease using AstraPay.</p>
                     </div>
                 </div>
                     <div class="col s12 l4 yes">
                         <div class="icon">
-                                <span class="mdi mdi-chart-line indigo-text"></span>
+                                <span class="transIcn mdi mdi-bank-transfer-out"></span>
                         </div>
                         <div class="desc">
-                            <h5>Make Deposit</h5>
-                            <p class="grey-text text-darken-1">Make deposits to any bank account, your wallet and your AstraPay account. <a href="#makeDeposit" class="indigo-text"> Read More...</a></p>
+                            <h5 class="indigo-text">QUICK TRANSFER</h5>
+                            <p class="indigo-text">Transfer money from your AstraPay account to any bank in Nigeria with the speed of life.</p>
+                               
                         </div>
                         </div>
                      <div class="col s12 l4 yes">
                             <div class="icon">
-                                 <i class="material-icons indigo-text money">money</i>
+                                 <span class="billIcn mdi mdi-credit-card-outline"></span>
                             </div>
                         <div class="desc">
-                            <h5>Make Withdrawals</h5>
-                             <p class="grey-text text-darken-1">From the comfort of your home, you can make fast and secured withdrawals to your accounts.<a href="#makeWithdrawal" class="indigo-text"> Read More...</a></p>
+                            <h5 class="indigo-text">MAKE BILL PAYMENTS</h5>
+                             <p class="indigo-text">Pay your DSTV, electricity, and other bills in the comfort of your home.</p>
                          </div>
                      </div>
                </div>
                <div class="row">
                         <div class="col s12 l4 yes">
                                 <div class="icon">
-                                        <span class="mdi mdi-arrow-right-bold indigo-text"></span>
+                                    <span class="withIcn mdi mdi-cash-multiple"></span>
                                     </div>
                                     <div class="desc">
-                                        <h5>Do Transfers</h5>
-                                        <p class="grey-text text-darken-1">You can transfer money from your AstraPay account to any bank by typing in your AstraPay pin. We vouch for our top-notch security.<a href="#doTransfers" class="indigo-text"> Read More...</a> </p>
+                                        <h5 class="indigo-text">MAKE WITHDRAWALS</h5>
+                                        <p class="indigo-text">Save yourself the stress of going to the ATM, make fast and secured withdrawals from any of our agent outlets.</p>
                                     </div>
                             </div>
                             <div class="col s12 l4 yes">
                                     <div class="icon">
-                                            <span class="mdi mdi-currency-ngn indigo-text"></span>
+                                            <span class="contriIcn mdi mdi-gamepad-circle-left"></span>
                                         </div>
                                         <div class="desc">
-                                            <h5>Take Soft Loans</h5>
-                                            <p class="grey-text text-darken-1">Request for both short term and long term loans and get it instantly, anytime and anywhere. Saves you from financial distress. We are at your beck and call. T&C applies.<a href="#takeSoft" class="indigo-text"> Read More...</a> </p>
+                                            <h5 class="indigo-text">DAILY CONTRIBUTION</h5>
+                                            <p class="indigo-text">With our daily contribution plan, you get amazing interest while keeping your money safe.</p>
                                         </div>
                                 </div>
                                 <div class="col s12 l4 yes">
                                         <div class="icon">
-                                                <span class="mdi mdi-gamepad-circle-left indigo-text"></span>
+                                                <span class="loanIcn mdi mdi-currency-ngn"></span>
                                             </div>
                                             <div class="desc">
-                                                <h5>Make Daily Contributions</h5>
-                                                <p class="grey-text text-darken-1">With our daily contribution plan, you never can know the lump sum that will produce. Tailored to you and your financial pedestal, give it a try!<a href="#dailyContri" class="indigo-text"> Read More...</a></p>
+                                                <h5 class="indigo-text">GET SOFT LOANS</h5>
+                                                <p class="indigo-text">Saves yourself from financial distress. Request for soft loans and get it instantly.</p>
                                             </div>
                                     </div>
                           </div>
                      </div>
            </section>
 
-    <!-- features -->
-    <section id="features" class="scrollspy">
-    <section class="section section-works grey lighten-4" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                 <!-- parallax -->
+    <!-- <div class="parallax-container">
+        <div class="parallax">
+        <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+        </div>
+    </div> -->
+    <!-- section 3 -->
+    <section id="makeDeposit" class="section section-works grey lighten-4 scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="400">
         <div class="container">
+        <h3 class="center-align ease" style="margin-top: 15px; padding-bottom: 20px; padding-top: 20px; margin-bottom: 1px;">Get to know us</h3>
             <div class="row">
-                <div class="col s12 l6 owl-carousel owl-theme">
-                    <img src="images/iph-raise.png" class="responsive-img">
-                    <img src="images/andro-raise.png" class="responsive-img" style="margin-top: 40px;">
+                <div class="col s12 l4 owl-carousel owl-theme">
+                    <img src="images/Android - 1.jpg" class="responsive-img">
+                    <img src="images/Android - 2.png" class="responsive-img">
+                    <img src="images/Android - 3.png" class="responsive-img">
                 </div>
-                <div class="col s12 l6 yes" style="margin-top:5em;">
-                    <div class="icon">
-                        <span class="mdi mdi-qrcode-scan icon indigo-text"></span>
-                    </div>
-                    <div class="desc">
-                    <h5 class="indigo-text" id="raiseVoucher">RAISE VOUCHERS</h5>
-                        <p>
-                        Raise a voucher for your next trip with ease using AstraPay. You can raise all your vouchers using our App.</p>
-                        </p>
-                        <br>
-                    <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                    </div>
+                <div class="col s12 l4 owl-carousel owl-theme">
+                    <img src="images/Android - 6.png" class="responsive-img">
+                    <img src="images/Android - 7.png" class="responsive-img">
+                    <img src="images/Android - 8.png" class="responsive-img">
+                </div>
+                <div class="col s12 l4 owl-carousel owl-theme">
+                    <img src="images/Android - 9.png" class="responsive-img">
+                    <img src="images/Android - 10.png" class="responsive-img">
+                    <img src="images/Android - 11.png" class="responsive-img">
                 </div>
             </div>
         </div>
     </section>
-    <section class="section section-works scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-            <div class="container">
-                <div class="row">
-                        <div class="col s12 l6 push-l6 owl-carousel owl-theme">
-                                <img src="images/iph-redeem.png" class="responsive-img">
-                                <img src="images/andro-redeem.png" class="responsive-img">
-                            </div>
-                    <div class="col s12 l6 pull-l6 yes" style="margin-top:5em;">
-                        <div class="icon">
-                                <span class="mdi mdi-qrcode-scan icon indigo-text"></span>
-                            </div>
-                            <div class="desc">
-                            <h5 class="indigo-text">CLAIM VOUCHERS</h5>
-                                <p>
-                              With AstraPay, you can easily redeem all your vouchers in the blink of an eye without stress.. 
-                                </p>
-                                <br>
-                            <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                            </div>
-                    </div>  
-                </div>
-            </div>
-        </section>
-        <section id="makeDeposit" class="section section-works grey lighten-4 scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12 l6 owl-carousel owl-theme">
-                            <img src="images/iph-depo.png" class="responsive-img">
-                            <img src="images/andro-depo.png" class="responsive-img">
-                        </div>
-                        <div class="col s12 l6 yes" style="margin-top:5em;">
-                            <div class="icon">
-                                    <span class="mdi mdi-chart-line icon indigo-text"></span>
-                                </div>
-                                <div class="desc">
-                                <h5 class="indigo-text">MAKE DEPOSIT</h5>
-                                    <p>
-                                            Make deposits to any bank account, your wallet and your AstraPay account.
-                                    </p>
-                                    <br>
-                                <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="makeWithdrawal" class="section section-works scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                    <div class="container">
-                        <div class="row">
-                                <div class="col s12 l6 push-l6 owl-carousel owl-theme">
-                                        <img src="images/iph--with.png" class="responsive-img">
-                                        <img src="images/andro-with.png" class="responsive-img">
-                                    </div>
-                            <div class="col s12 l6 pull-l6 yes" style="margin-top:5em;">
-                                <div class="icon">
-                                        <i class="material-icons money indigo-text">money</i>
-                                    </div>
-                                    <div class="desc">
-                                    <h5 class="indigo-text">MAKE WITHDRAWALS</h5>
-                                        <p>
-                                        From the comfort of your home, you can make fast and secured withdrawals to your accounts.
-                                        </p>
-                                        <br>
-                                    <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                                    </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
-                <section id="dailyContri" class="section section-works grey lighten-4 scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col s12 l6 owl-carousel owl-theme">
-                                    <img src="images/iphContri.png" class="responsive-img">
-                                    <img src="images/andro-contr.png" class="responsive-img">
-                                </div>
-                                <div class="col s12 l6 yes" style="margin-top:5em;">
-                                    <div class="icon">
-                                            <span class="mdi mdi-gamepad-circle-left icon indigo-text"></span>
-                                        </div>
-                                        <div class="desc">
-                                        <h5 class="indigo-text">MAKE DAILY CONTRIBUTIONS</h5>
-                                            <p>
-                                            With our daily contribution plan, you never can know the lump sum that will produce. Tailored to you and your financial pedestal, give it a try!
-                                            </p>
-                                            <br>
-                                        <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="doTransfers" class="section section-works scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                            <div class="container">
-                                <div class="row">
-                                        <div class="col s12 l6 push-l6 owl-carousel owl-theme">
-                                                <img src="images/iph-trans.png" class="responsive-img">
-                                                <img src="images/andro-trans.png" class="responsive-img">
-                                            </div>
-                                    <div class="col s12 l6 pull-l6 yes" style="margin-top:5em;">
-                                        <div class="icon">
-                                                <span class="mdi mdi-arrow-right-bold icon indigo-text"></span>
-                                            </div>
-                                            <div class="desc">
-                                            <h5 class="indigo-text">DO TRANSFERS</h5>
-                                                <p>You can transfer money from your AstraPay account to any bank by typing in your AstraPay pin. We vouch for our top-notch security.
-                                                </p>
-                                                <br>
-                                            <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                                            </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </section>
-                        <section id="takeSoft" class="section section-works grey lighten-4 scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col s12 l6 owl-carousel owl-theme">
-                                            <img src="images/iph-loan.png" class="responsive-img">
-                                            <img src="images/andro-loan.png" class="responsive-img">
-                                        </div>
-                                        <div class="col s12 l6 yes" style="margin-top:5em;">
-                                            <div class="icon">
-                                                    <span class="mdi mdi-currency-ngn icon indigo-text"></span>
-                                                </div>
-                                                <div class="desc">
-                                                <h5 class="indigo-text">TAKE SOFT LOANS</h5>
-                                                    <p>
-                                                            Request for both short term and long term loans and get it instantly, anytime and anywhere. Saves you from financial distress. We are at your beck and call. T&C applies.
-                                                    </p>
-                                                    <br>
-                                                <a href="#works" class="white-text indigo waves-effect btn btn-large">Get Started</a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                 </section>
 
+
+    <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+        <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+    
     <!-- how it works -->
-    <section id="works" class="section transparent scrollspy">
+    <section id="works" class="workSection section scrollspy">
         <div class="container myCont">
-            <h2 class="center-align">Get AstraPay</h2>
+            <h3 style="padding-top:20px; padding-bottom: 20px;" class="center-align">HOW IT WORKS</h3>
             <!-- how started -->
             <div class="row">
-                    <div class="col s12 l6">
-                        <img src="images/playstore2.png" class="responsive-img">
+                <div class="col s12 m3">
+                  <div style="background-color: #E0DCFF;" class="card darken-1">
+                    <div class="card-content center white-text">
+                        <div class="icon">
+                            <span class="phoneIcon center mdi mdi-cellphone-android"></span>
+                       </div>
+                      <h5 style="color: #1a00d4;">Download the App</h5>
+                      <div>
+                        <a href="https://play.google.com/store/apps"><img src="images/google-play-badge-1.svg"></a>
+                      </div>
                     </div>
-                    <div class="col s12 l6" style="margin-top:2em;">
-                    
-                        <div class="btn-floating indigo btn-small"><i class="material-icons">done</i></div>
-                        <span class="flow-text">&nbsp; Download the AstraApp</span>
-                        <br>
-                        <br>
-                        
-                        <div class="btn-floating indigo btn-small"><i class="material-icons">done</i></div>
-                        <span class="flow-text">&nbsp; Create your account</span>
-                        <br>
-                        <br>   
-                            
-                        <div class="btn-floating indigo btn-small"><i class="material-icons">done</i></div>
-                        <span class="flow-text">&nbsp; Apply for the loan that matches your needs</span>
-                        <br>
-                        <br>
-                        <div>
-                            <a href="#"><img src="images/apple.svg" width="100" class="responsive-img" style="margin-right:10px;"></a>
-                            <a href="#"><img src="images/playstore.svg" width="100" class="responsive-img"></a>
-                            <a href="#"><span class="mdi mdi-share-variant shareBtn black-text"></span></a>
-                        </div>
-    
-                    </div>
+                  </div>
                 </div>
-
+                <div class="col s12 m3">
+                    <div style="background-color: #E0DCFF;" class="card1 card darken-1">
+                      <div class="card-content center white-text">
+                          <div class="icon">
+                               <span class="acctIcon center mdi mdi-account-check"></span>
+                         </div>
+                        <h5 style="color: #1a00d4;">Sign up</h5>
+                        <div>
+                            <p style="color:#1a00d4;">
+                                Sign up with your phone number, answer a security questions, 
+                                and get verified in less than 2 minutes.
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s12 m3">
+                    <div style="background-color: #E0DCFF;" class="card2 card darken-1">
+                      <div class="card-content center white-text">
+                          <div class="icon">
+                              <span class="walletIcon center mdi mdi-wallet"></span>
+                    
+                            </div>
+                        <h5 style="color:#1a00d4;">Fund Wallet</h5>
+                        <div>
+                            <p style="color:#1a00d4;">
+                                Fund your AstraPay wallet, make transaction, 
+                                recharge your mobile and get discount on first recharge of #200 and above.
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s12 m3">
+                    <div style="background-color: #E0DCFF;" class="card3 card darken-1">
+                      <div class="card-content center white-text">
+                          <div class="icon">
+                            <span class="loanIcon center mdi mdi-currency-ngn"></span>
+                         </div>
+                        <h5 style="color:#1a00d4;">Get Soft Loans</h5>
+                        <div>
+                            <p style="color:#1a00d4;">
+                                Get advancement for your business, 
+                                school fees, events and many more up to #150, 000.
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>  
         </div>
     </section>
 
+        <!-- parallax
+        <div class="parallax-container">
+            <div class="parallax">
+            <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+            </div>
+        </div> -->
 
     <!-- section FAQ -->
-    <section id="Faq" class="section section-faq grey lighten-4 scrollspy">
-        <div class="container">
-            <h4>Frequently asked questions</h4>
-            <p>Can't find your answer? We're here to help! Ask one of our advisors at <a class="indigo-text">
-                nigeria@astrapay.co.</a></p>
-            <p>Get quick answers to your questions. Contact Us if you do not find what you're looking for.</p>
-        </div>
+    <section class="section-faq section scrollspy">
+        <h4 class="center" style="color: #1a00d4;">Frequently asked questions</h4>
         <div class="container">
             <ul class="collapsible">
+                    <li>
+                            <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>What is ASTRAPAY?</div>
+                            <div class="collapsible-body"><span style="color: #1a00d4;">
+                                    AstraPay is a Nigerian fully digital e-banking platform. With AstraPay, you can do all your banking transactions without being physically present at a bank.
+                            </span></div>
+                        </li>
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>What is AstraPay?</div>
-                    <div class="collapsible-body"><span>
-                    Astra Pay LTD is a UK registered company which is opearating in the IT and FinTech industries. We provide services in IT technologies and Blockchain. Our team consists of finance and IT professionals to bring our customers reliable and sophisticated service.
-                    </span></div>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>Am I eligible for a loan?</div>
+                    <div class="collapsible-body"><span style="color: #1a00d4;">To determine if you’re eligible to borrow money, our lending partners will run a quick credit check when you make a loan request.</span></div>
+                </li>
+        
+                <li>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>Why is my Bank Verification Number (BVN) required to use AstraPay?</div>
+                    <div class="collapsible-body"><span style="color: #1a00d4;">We request your BVN as a security measure. This is used to verify that the individual using the AstraPay service is the same as the owner of the provided bank account. Also, this will ensure that your details cannot be used without your authorization, in the event of a Third-party having to access your account details.
+                        <b>Please note: Your BVN does not provide access to your account.</b> You're encouraged to confirm this from your bank if in doubt before proceeding.</span></div>
                 </li>
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>Where is AstraPay Located?</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>What are other customers saying about AstraPay?</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>In which countries does AstraPay Operate?</div>
-                    <div class="collapsible-body"><span>
-                    Astra Pay LTD is a UK registered company which is opearating in the IT and FinTech industries. We provide services in IT technologies and Blockchain. Our team consists of finance and IT professionals to bring our customers reliable and sophisticated service.
-                        </span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>How do i get the latest version of the app?</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">add</i>Can i call a representative or visit the office?</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>What is a Customer Account ID? How do I find mine?</div>
+                    <div class="collapsible-body"><span style="color: #1a00d4;">Your customer account ID is the unique number Astrapay uses to identify you which is your registered Phone Number. Think of it as your account number with us. It can be found while logging into your app.
+                        <b>Please take note of this customer account ID as it should be used for resolving account issues speedily or on any repayment transaction details for quick identification.</span></div>
                 </li>
             </ul>
         </div>
+        <div class="container">
+            <p>Can't find your answer? We're here to help! Ask one of our advisors at <a class="indigo-text">
+                nigeria@astrapay.co.</a></p>
+            <p>Or Chat with us on Live Support.</p>
+        </div>
     </section>
 
-    <!-- section contact -->
-    <section id="contact" class="section section-contact scrollspy">
-            <div class="container">
+
+    <!-- part of the plan section -->
+    <div class="container part-planSection hide-on-med-and-down">
+        
+            <div class="row">
+                <div class="col s12 l8">
+                    <h6 class="center-align h6">You're part of the plan</h6>
                 <div class="row">
-                    <div class="col s12 l7">
-                        <div class="card-panel grey lighten-3">
-                            <h5 class="indigo-text">Leave a message</h5>
-                            <form>
-                                <div class="input-field">
-                                    <input type="text" required>
-                                    <label for="name">Name</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="email" required>
-                                    <label for="email">Email</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="tel" pattern="^[0]\d{10}$" title='Phone Number (Format:  081-000-000-00)' required>
-                                    <label for="phone">Phone</label>
-                                </div>
-                                <div class="input-field">
-                                    <textarea class="materialize-textarea"></textarea>
-                                    <label for="messsage">Your message</label>
-                                </div>
-                                <div class="center-align">
-                                    <input type="submit" value="Submit" class="btn indigo">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col s12 l4 offset-l1" style="padding: 10px;">
-                        <div>
-                        <i class="material-icons indigo-text prefix">email</i>
-                        <a class="flow-text grey-text lighten-3">&nbsp;info@astrapay.com</a>
-                        </div>
-                        <br>
-                        <div>
-                        <i class="material-icons indigo-text prefix">call</i>
-                        <span class=" flow-text grey-text lighten-3">&nbsp; 070022552528</span>
-                        </div>
-                        <div>
-                            <i class="material-icons indigo-text prefix" id="pels">room</i>
-                            <br>
-                            <iframe class="responsive-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.4375731016744!2d3.865877858022743!3d7.367888898670849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjInMDQuNCJOIDPCsDUyJzAxLjEiRQ!5e0!3m2!1sen!2sng!4v1566119656709!5m2!1sen!2sng" width="320" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="container">
+                        <div class="col s4 l12 Social">
+                            <ul class="link-style">
+                                <li><a class="indigo-text"><i class="fab indigo-text fa-facebook"></i>   Facebook</a class="indigo-text"></li>
+                                <li><a class="indigo-text"><i class="fab indigo-text fa-twitter"></i>    Twitter</a></li>
+                                <li><a class="indigo-text"><i class="fab indigo-text fa-instagram"></i>   Instagram</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-    </section>
-
-    <!--About Us-->
-    <section class=" section scrollspy grey lighten-4" id="about">
-        <div class="row container">
-            <div class="col s12 l4 grey lighten-4">
-                <br>
-                <img alt=" " src="images/aboutNew.png" class="responsive-img">
-            </div>
-            <div class="col s12 l6 offset-l2">
-                <br><br><br>
-                <ul class="tabs">
-                    <li class="tab col s6 grey lighten-4">
-                        <a href="#about_us" class="indigo-text">About Us</a>
-                    </li>
-                    <li class="tab col s6 grey lighten-4">
-                        <a href="#why_us" class="indigo-text">Why Us</a>
-                    </li>
-                </ul>
-
-                <div class="col s12" id="about_us">
-                    <p class="flow-text indigo-text"> About Us </p>
-                    <p>Astra Pay LTD is a UK registered company which is opearating in the IT and FinTech industries. We provide services in IT technologies and Blockchain. Our team consists of finance and IT professionals to bring our customers reliable and sophisticated service.</p>
-                </div>
-
-                <div class="col s12" id="why_us">
-                    <p class="flow-text indigo-text"> Why Us </p>
-                    <p>
-                        We are various. We diversify our activity to cover more of our client's interests. 
-                        We are responsive. We aim to answer your questions and resolve any issues within a day. 
-                        We are informative. We try to educate our readers about the world of Financial Technology. 
-                    </p>
+                <div class="center-align">
+                    <a href="#works" class="GetStartedBtn white-text waves-effect btn btn-large">Get Started</a>
                 </div>
             </div>
-         </div>
-    </section>
+            <div class="col s12 l4">
+            <img src="images/hands-heart-love-305530.png" class="responsive-img">
+            </div>
+            </div>
+        
+    </div>
+    <!-- part of the plan mobile -->
+
+    <div class="container part-planSectionMobile hide-on-large-only">
+        
+        <div class="row">
+            <div class="col s12">
+                <h6 class="center-align h6">You're part of the plan</h6>
+            </div>
+        </div>
+                <div class="container">
+                    <div class="col s4 Social">
+                        <ul class="link-style center-align">
+                            <li><a class="indigo-text"><i class="fab indigo-text fa-facebook"></i>   Facebook</a></li>
+                            <li><a class="indigo-text"><i class="fab indigo-text fa-twitter"></i>   Twitter</a></li>
+                            <li><a class="indigo-text"><i class="fab indigo-text fa-instagram"></i>   Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            <div class="center-align">
+                <a href="#works" class="GetStartedBtn white-text waves-effect btn btn-small">Get Started</a>
+            </div>
+        </div>
+        
+        </div>
+    
+</div>
 
     <!-- section footer -->
-    <footer id="footer" class="page-footer grey darken-3 white-text center">
-            <div class="">
+    <footer id="footer">
+            <div class="hide-on-med-and-down">
                 <div class="row">
                     <div class="col s12 l3">
                         <ul>
                             <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
                         </ul>
                     </div>
-                    <div class="col s12 l3 ched">
-                        <h5>Curious about AstraPay?</h5>
-                        <p><a href="#about" class="white-text">About us</a></p>
-                        <p><a href="#works" class="white-text">Get Astrapay</a><p>
-                        <p><a href="#features" class="white-text">Features</a></p>
-                        <p><a href="#Faq" class="white-text">FAQs</a></p>
-                        <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <div style="margin-top: 15px;" class="col s12 l3 ched">
+                        <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                        <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                        <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                        <p><a href="#features" class="white-text">Sunday</a></p>
+                        <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
                     </div>
-                    <div class="col s12 l3">
-                            <h5>Get Astrapay</h5>
-                            <ul>
-                                <li><a href="https://play.google.com/store/apps"><img src="images/playstore.svg" width="140" class="responsive-img" style="margin-bottom: 5%;"></a></li>
-                                <li><a href="https://www.apple.com/ng/ios/app-store/"><img src="images/apple.svg" width="140" class="responsive-img"></a></li>
-                            </ul>
+                    <div style="margin-top: 15px;" class="col s12 l3">
+                            <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                            <p class="white-text">info@astrapay.com</p>
+                            <p class="white-text">070022552528</p>
                         </div>
-                    <div class="col s12 l3">
-                        <h5>Connect</h5>
-                        <ul class="center">
-                            <li><a href="#" class="btn-floating btn-small indigo darken-3">
-                                    <i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#" class="btn-floating btn-small indigo darken-3">
-                                    <i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" class="btn-floating btn-small indigo darken-3">
-                                    <i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#" class="btn-floating btn-small indigo darken-3">
-                                    <i class="fab fa-linkedin"></i></a></li>
-                        </ul>
+                    <div style="margin-top: 15px;" class="col s12 l3">
+                        <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                        <p><a href="#Faq" class="white-text">FAQs</a></p>
+                        <p><a href="#about" class="white-text">About us</a></p>
+                        <p><a href="policy.html" class="white-text">Privacy policy</a></p>
+                        <p><a href="terms.html" class="white-text">Terms & Conditions</a><p>
+                        <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright" id="copyright">
-                    <div class="container center-align" style="float: center">
+            <div class="footer-copyright hide-on-med-and-down" id="copyright">
+                    <div class="container white-text center-align" style="float: center">
+                        &copy; 2019 AstraPay LTD. || All rights reserved.
+                    </div>
+            </div>
+
+            <div class="hide-on-large-only center-align">
+                <div class="row">
+                    <div class="mobileFootLogo col s12">
+                        <ul>
+                            <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 15px;" class="col s12 ched">
+                        <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                        <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                        <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                        <p><a href="#features" class="white-text">Sunday</a></p>
+                        <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                    </div>
+                    <div style="margin-top: 15px;" class="col s12">
+                            <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                            <p class="white-text">info@astrapay.com</p>
+                            <p class="white-text">070022552528</p>
+                        </div>
+                    <div style="margin-top: 15px;" class="col s12">
+                        <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                        <p><a href="#Faq" class="white-text">FAQs</a></p>
+                        <p><a href="#about" class="white-text">About us</a></p>
+                        <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                        <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                        <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright hide-on-large-only" id="copyright">
+                    <div class="container white-text center-align" style="float: center">
                         &copy; 2019 AstraPay LTD. || All rights reserved.
                     </div>
             </div>
@@ -653,6 +721,27 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="materialize/js/materialize.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- carousel section3 init -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        indicators: false,
+        autoplayHoverPause: true,
+        height: 600,
+        transition: 2000,
+        interval: 6000,
+    });
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+      
+    </script>
     <!-- carousel script -->
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script>
@@ -661,9 +750,13 @@
     var elems = document.querySelectorAll('.slider');
     var instances = M.Slider.init(elems, {
         indicators: false,
+        autoplayHoverPause: true,
         height: 600,
-        transition: 500,
+        transition: 2000,
         interval: 6000,
+    });
+    instance.pause(elems, {
+        autoplayHoverPause: true,
     });
   });
 
@@ -681,7 +774,7 @@
             $('.collapsible').collapsible();
             $('.carousel.carousel-slider').carousel({
                 fullwidth: true,
-                indicators: true
+                indicators: false
             });
 
             $(".owl-carousel").owlCarousel({

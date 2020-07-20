@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AstraPay | Earn more, Pay Less</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/astraFooter.png">
+    <link rel="icon" type="image/png" sizes=32x32 href="images/astraFooter.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- for the animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- cdn for material icon -->
+    <link href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- for carousel -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
+
+    <style>
+        body{
+            background: #E0DCFF;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .parallax {
+        /* The image used */
+        background-image: url("paraStyle.jpg");
+
+        /* Set a specific height */
+        min-height: 200px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        }
+        #logo{
+            height: 50px;
+            margin-left: 35px;
+            margin-top: 15px;
+        } 
+       .slider .btn{
+           margin-top: 40px;
+       }
+       
+       
+       /* praise */
+       /* praise */
+       .tabs .indicator{
+            background-color: #1a237e;
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active{
+            background: transparent;
+        } 
+        h2,h3{
+            margin: 0px;
+            
+        }
+        #contact .input-field input:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field input:focus + label{
+           color: #1a00d4;
+       }
+       #contact .input-field textarea:focus{
+           border-bottom: 1px solid #1a00d4;
+       }
+       #contact .input-field textarea:focus + label{
+           color: #1a00d4;
+       }
+       #pels{
+           margin-top: 20px;
+        } 
+       #footLogo{
+            position: relative;
+            height: 200px;
+            width: 250px;
+            margin-top: 10%;    
+        }
+        .agentSection1{
+            background: url(images/agentBg.jpg); 
+            background-size: cover; 
+            padding-bottom: 0px;
+        }
+        .icon{
+            font-size: 50px;
+            color: white;
+        }
+        .icon .transIcn{
+            font-size: 60px;
+        }
+        /* app features */
+        .yes .icon{
+            float: left;
+            margin-right: 20px;
+            font-size: 50px;
+            margin-top: 5px;
+        }
+        .yes .icon .money{
+            font-size: 35px;
+        }
+        .yes .desc{
+            overflow: hidden;
+        }
+        .section2Btn{
+            color: #FF4521;
+        } 
+        .getAstra{
+            border-radius: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .section2{
+            background-color:white;
+            background:white;
+        }
+        .section3{
+            background-image:
+            linear-gradient( rgb(0,0,0,0.8), rgba(0,0,0, 0.8)),
+            url('images/ownSection.svg');
+            background-size: cover;
+
+        }
+        .growSection{
+            background-image: url(images/growImage.svg);
+            background-size: cover;
+            position: relative;
+            z-index: 5;
+        }
+        #GetStartedBtn{
+            background-color: #FF4521;
+            border-radius: 15px;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+        #merchBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #agentBtn{
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
+        #footerSect{
+            margin-top: 150px;
+        }
+        #footer ul.center{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #footer{
+            background-color: #E0DCFF;
+            background: url(images/foot.png); 
+            background-size: cover; 
+            padding-bottom: 0px;
+            margin-top: -200px;
+        }
+        #copyright{
+            background-color: #131212;
+            background-size: inherit;
+            border-top: 2px white;
+            text-align: center;
+        }
+        @media only screen and (max-width:767px){
+            section .myCont h2{
+                font-size: 2rem;
+                line-height: 110%;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- navbar -->
+        <div class="navbar-fixed">
+        <nav class="nav-wrapper indigo">
+            <div class="">
+                <a href="#" class="brand-logo">
+                    <img src="images/AgentLogo1.png" alt="logo" id="logo" >
+                </a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons indigo-text">menu</i>
+                </a>
+                
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#Faq" class="white-text center-align text-darken-4">About Us</a></li>
+                    <li><a href="#Faq" class="white-text center-align text-darken-4">FAQs</a></li>
+                    <li><a href="merchant.html" id="merchBtn" class="indigo-text white waves-effect btn btn-small">Merchant</a></li>
+                    <li><a href="register.html" id="agentBtn" class="indigo-text white waves-effect btn-small btn">Become An Agent</a></li>
+                    
+                </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+                <!-- mobile nav-links -->
+                <ul class="sidenav white" id="mobile-links">
+                    <li class="divider"></li>
+                    <li><a href="#Faq" class="waves-effect" target="_self">About Us</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#Faq" class="waves-effect" target="_self">FAQs</a></li>
+                    <li class="divider"></li>
+                    <li><a href="merchant.html" class="waves-effect" target="_self">Merchant</a></li>
+                    <li class="divider"></li>
+                    <li><a href="register.html" class="waves-effect" target="_self">Become An Agent</a>
+                    </li>
+                </ul>
+               
+                <!-- section 1 -->
+                <div style="max-width:initial;" class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/pelzSlider.jpg" style="background-attachment:fixed">
+                            <div id="txtSlide" style="margin-left: 150px; margin-top: 200px;" class="caption right-align">
+                                <h4 class="light indigo-text">Teleport your financial life</h4>
+                                <p class="light indigo-text">Become an Agent today and enjoy financial freedom</p>
+                                <a href="#register" style="margin-right: 50px; border-radius: 15px;" class="white-text indigo waves-effect btn btn-large">SIGN UP</a>
+                                <!-- <a href="#works" class="indigo-text white waves-effect btn btn-large">Get Started</a> -->
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/slider.svg" style="background-attachment:fixed; background-size: cover; background-position: center">
+                            <div class="caption">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="parallax-container">
+                    <div class="parallax">
+                    <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+                    </div>
+                </div> -->
+
+                <!-- Section 2 -->
+                <div style="max-width:initial;" class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/Section2Agent.jpg" style="background-attachment:fixed">
+                            <div id="txtSlide" style="margin-top: 150px;" class="caption left-align">
+                                <p class="light indigo-text">Do it your way</p>
+                                <h3 style="color: #FF4521;" class="light">Simple, Fast, and Secured</h3>
+                                <p class="light indigo-text">Earn a reward for every transaction <br> 
+                                    you perform for your customers.</p>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="parallax-container">
+                    <div class="parallax">
+                    <img src="images/paraStyle.jpg" alt="" class="responsive-img">
+                    </div>
+                </div> -->
+
+                <!-- section 3 -->
+                <section id="section3" class="section3 section white-text works scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                    <div class="container">
+                        <h5 class="center-align">OWN YOUR WORLD</h5>
+                        <div class="row" style="margin-bottom: 50px;">
+                            <div class="col s12 l4 yes">
+                                <div class="icon">
+                                    <span class="voucIcn mdi mdi-qrcode-scan"></span>
+                                </div>
+                                <div class="desc">
+                                    <h5 class="">Astra for you</h5>
+                                    <p class="">Make endless transaction 
+                                        for customers with ASTRAPAY 
+                                        and earn commision for 
+                                        every transaction</p>
+                                </div>
+                            </div>
+                                <div class="col s12 l4 yes">
+                                    <div class="icon">
+                                            <span class="transIcn mdi mdi-bank-transfer-out"></span>
+                                    </div>
+                                    <div class="desc">
+                                        <h5 class="">Be connected</h5>
+                                        <p class="">Connect with different traders 
+                                            around you and help them 
+                                            save their money easily.</p>
+                                    </div>
+                                    </div>
+                                 <div class="col s12 l4 yes">
+                                        <div class="icon">
+                                             <span class="billIcn mdi mdi-credit-card-outline"></span>
+                                        </div>
+                                    <div class="desc">
+                                        <h5 class="">Simple, safe, and fast</h5>
+                                         <p class="">Raise and Redeem voucher for 
+                                            customers around you.</p>
+                                     </div>
+                                 </div>
+                           </div>
+                           <div class="row right-align">
+                               
+                            <a href="register.html" style="margin-right: 10px; background-color: #FF4521; border-radius: 15px;" class="white-text waves-effect section2Btn btn btn-large"><i class="material-icons right">send</i>GET STARTED</a>
+                           </div>
+                    </div>
+                    </section>
+
+                    
+                    
+    <!-- section FAQ -->
+    <section class="section-faq section scrollspy" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+        <h4 class="center" style="color: #1a00d4;">Frequently asked questions</h4>
+        <div class="container">
+            <ul class="collapsible">
+                    <li>
+                            <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>How do I make money as an agent?</div>
+                            <div class="collapsible-body"><span style="color: #FF4521;">
+                                You earn money by providing financial services (withdrawals and deposits), 
+                                bill payments, airtime or data bundles purchases or charging your customers with your discretion.                                
+                            </span></div>
+                        </li>
+                <li>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>What is a Customer Account ID? How do I find mine?</div>
+                    <div class="collapsible-body"><span style="color: #FF4521;">To determine if you’re eligible to borrow money, our lending partners will run a quick credit check when you make a loan request.</span></div>
+                </li>
+        
+                <li>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>Why is my Bank Verification Number (BVN) required to use AstraPay?</div>
+                    <div class="collapsible-body"><span style="color: #FF4521;">We request your BVN as a security measure. This is used to verify that the individual using the AstraPay service is the same as the owner of the provided bank account. Also, this will ensure that your details cannot be used without your authorization, in the event of a Third-party having to access your account details.
+                        <b>Please note: Your BVN does not provide access to your account.</b> You're encouraged to confirm this from your bank if in doubt before proceeding.</span></div>
+                </li>
+                <li>
+                    <div style="color: #1a00d4;" class="collapsible-header"><i class="material-icons indigo-text">add</i>What is a Customer Account ID? How do I find mine?</div>
+                    <div class="collapsible-body"><span style="color: #FF4521;">Your customer account ID is the unique number Astrapay uses to identify you which is your registered Phone Number. Think of it as your account number with us. It can be found while logging into your app.
+                        <b>Please take note of this customer account ID as it should be used for resolving account issues speedily or on any repayment transaction details for quick identification.</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>Can't find your answer? We're here to help! Ask one of our advisors at <a class="indigo-text">
+                nigeria@astrapay.co.</a></p>
+            <p>Or Chat with us on Live Support.</p>
+        </div>
+    </section>
+
+
+    <!-- grow with us section -->
+    <div class="container growSection hide-on-med-and-down" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+        
+        <div class="row">
+            <div class="col s12 l12">
+                <h4 class="white-text center-align h6">Grow with Us</h4>
+            <div class="row">
+                <div class="container">
+                    <p class=" center-align white-text">Become financially free with our endless transaction offers</p>
+                </div>
+            </div>
+            <div class="center-align">
+                <a href="#works" id="GetStartedBtn" class="white-text waves-effect btn btn-large">Get Started</a>
+            </div>
+        </div>
+        </div>
+    
+</div>
+
+<!-- section footer -->
+<footer id="footer">
+        <div class="">
+            <div class="row">
+                <div class="col s12 l3">
+                    <ul>
+                        <li><a href="#"><img src="images/whitelogo.png" id="footLogo"></a></li>
+                    </ul>
+                </div>
+                <div style="margin-top: 15px;" class="col s12 l3 ched">
+                    <h5 style="text-decoration: underline;" class="white-text">We are available</h5>
+                    <p><a href="#about" class="white-text">Monday - Saturday</a></p>
+                    <p><a href="#works" class="white-text">8am - 7pm</a><p>
+                    <p><a href="#features" class="white-text">Sunday</a></p>
+                    <p><a href="#Faq" class="white-text">2pm - 7pm</a></p>
+                </div>
+                <div style="margin-top: 15px;" class="col s12 l3">
+                        <h5 style="text-decoration: underline;" class="white-text">Contact us</h5>
+                        <p class="white-text">info@astrapay.com</p>
+                        <p class="white-text">070022552528</p>
+                    </div>
+                <div style="margin-top: 15px;" class="col s12 l3">
+                    <h5 style="text-decoration: underline;" class="white-text">Resources</h5>
+                    <p><a href="#Faq" class="white-text">FAQs</a></p>
+                    <p><a href="#about" class="white-text">About us</a></p>
+                    <p><a href="howTo.html#policy" class="white-text">Privacy policy</a></p>
+                    <p><a href="#works" class="white-text">Terms & Conditions</a><p>
+                    <p><a href="#features" class="white-text">Third Party Terms of Use</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" id="copyright">
+                <div class="container white-text center-align" style="float: center">
+                    &copy; 2019 AstraPay LTD. || All rights reserved.
+                </div>
+        </div>
+    </footer>
+                
+                
+            
+
+                <script src="https://kit.fontawesome.com/d54c227c34.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                <script src="materialize/js/materialize.min.js" type="text/javascript"></script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            
+                <!-- carousel section3 init -->
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.carousel');
+                var instances = M.Carousel.init(elems, {
+                    indicators: false,
+                    autoplayHoverPause: true,
+                    height: 600,
+                    transition: 2000,
+                    interval: 6000,
+                });
+              });
+            
+              // Or with jQuery
+            
+              $(document).ready(function(){
+                $('.carousel').carousel();
+              });
+                  
+                </script>
+                <!-- carousel script -->
+                <script src="owlcarousel/owl.carousel.min.js"></script>
+                <script>
+            
+                document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.slider');
+                var instances = M.Slider.init(elems, {
+                    indicators: false,
+                    autoplayHoverPause: true,
+                    height: 600,
+                    transition: 2000,
+                    interval: 6000,
+                });
+                instance.pause(elems, {
+                    autoplayHoverPause: true,
+                });
+              });
+            
+                    $(document).ready(function(){
+                        AOS.init();
+                        $('.sidenav').sidenav().on('click tap', 'li a', () => {
+                             $('.sidenav').sidenav('close');
+                        });
+                        $('.modal').modal();
+                        $('.tooltipped').tooltip();
+            
+                        $('.scrollspy').scrollSpy();
+                        $('.tabs').tabs();
+                        $('.parallax').parallax();
+                        $('.collapsible').collapsible();
+                        $('.carousel.carousel-slider').carousel({
+                            fullwidth: true,
+                            indicators: false
+                        });
+            
+                        $(".owl-carousel").owlCarousel({
+                            loop:true,
+                            margin:10,
+                            nav:false,
+                            dots:false,
+                            autoplay:true,
+                            autoplayHoverPause:true,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                600:{
+                                    items:1
+                                },
+                            }
+                        });
+            
+                        
+                    });
+                </script>
+            
+                <!-- tawk -->
+                <!--Start of Tawk.to Script-->
+              <script type="text/javascript">
+                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/5d5683cdeb1a6b0be607d1a0/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+                })();
+                </script>
+                <!--End of Tawk.to Script-->
+            </body>
+            </html>
